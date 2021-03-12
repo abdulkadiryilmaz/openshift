@@ -1,6 +1,4 @@
-FROM            openjdk:8
-MAINTAINER      ayilmaz
-WORKDIR         /opt/cosighter
-COPY            . .
-CMD             java -jar openshift-springboot-rest-1.0.0.jar
-
+FROM openjdk:8-jdk-alpine
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
