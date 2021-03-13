@@ -1,3 +1,6 @@
+
+-runproperties: gosh.args=--noshutdown
+
 -runrequires: \
 	bnd.identity;id='org.apache.felix.gogo.command',\
 	bnd.identity;id='org.apache.felix.gogo.runtime',\
