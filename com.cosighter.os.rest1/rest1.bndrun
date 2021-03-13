@@ -1,5 +1,7 @@
 
--runproperties: gosh.args=--noshutdown
+-resolve.effective: active
+-runsystempackages: sun.misc
+-runproperties: gosh.args=--noshutdown, felix.fileinstall.dir=config, logback.configurationFile=logback.xml
 
 -runrequires: \
 	bnd.identity;id='org.apache.felix.gogo.command',\
