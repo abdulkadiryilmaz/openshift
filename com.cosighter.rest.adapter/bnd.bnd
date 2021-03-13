@@ -1,0 +1,72 @@
+#
+# com.cosighter.rest.adapter PROVIDER BUNDLE
+#
+
+-buildpath: \
+	osgi.enroute.base.api,\
+	org.apache.aries.javax.jax.rs-api,\
+	com.cosighter.rest.common;version=latest,\
+	org.keycloak.keycloak-servlet-filter-adapter,\
+	org.keycloak.keycloak-adapter-spi
+	
+
+-testpath: \
+	osgi.enroute.junit.wrapper, \
+	osgi.enroute.hamcrest.wrapper, \
+	org.assertj.core
+
+-runrequires: \
+	bnd.identity;id='org.apache.felix.gogo.command',\
+	bnd.identity;id='org.apache.felix.gogo.runtime',\
+	bnd.identity;id='org.apache.felix.gogo.shell',\
+	bnd.identity;id='ch.qos.logback.classic',\
+	bnd.identity;id='ch.qos.logback.core',\
+	bnd.identity;id='com.cosighter.rest.adapter',\
+	bnd.identity;id='org.keycloak.keycloak-servlet-filter-adapter',\
+	bnd.identity;id='com.cosighter.config',\
+	osgi.identity;filter:='(&(osgi.identity=bcprov)(version>=1.68.0))',\
+	osgi.identity;filter:='(&(osgi.identity=com.fasterxml.jackson.core.jackson-annotations)(version>=2.12.2))',\
+	osgi.identity;filter:='(&(osgi.identity=com.fasterxml.jackson.core.jackson-core)(version>=2.12.2))',\
+	osgi.identity;filter:='(&(osgi.identity=com.fasterxml.jackson.core.jackson-databind)(version>=2.12.2))',\
+	osgi.identity;filter:='(&(osgi.identity=org.jboss.logging.jboss-logging)(version>=3.4.1))',\
+	osgi.identity;filter:='(&(osgi.identity=bcpkix)(version>=1.68.0))',\
+	bnd.identity;id='com.cosighter.rest.common'
+-runbundles: \
+	ch.qos.logback.classic;version='[1.2.3,1.2.4)',\
+	ch.qos.logback.core;version='[1.2.3,1.2.4)',\
+	com.cosighter.rest.adapter;version=snapshot,\
+	com.cosighter.rest.common;version=snapshot,\
+	org.apache.aries.javax.jax.rs-api;version='[1.0.4,1.0.5)',\
+	org.apache.aries.jax.rs.whiteboard;version='[1.0.7,1.0.8)',\
+	org.apache.felix.configadmin;version='[1.9.16,1.9.17)',\
+	org.apache.felix.converter;version='[1.0.12,1.0.13)',\
+	org.apache.felix.gogo.command;version='[1.1.0,1.1.1)',\
+	org.apache.felix.gogo.runtime;version='[1.1.2,1.1.3)',\
+	org.apache.felix.gogo.shell;version='[1.1.2,1.1.3)',\
+	org.apache.felix.http.jetty;version='[4.0.14,4.0.15)',\
+	org.apache.felix.http.servlet-api;version='[1.1.2,1.1.3)',\
+	org.apache.felix.scr;version='[2.1.16,2.1.17)',\
+	org.apache.servicemix.specs.annotation-api-1.3;version='[1.3.0,1.3.1)',\
+	org.glassfish.javax.json;version='[1.1.4,1.1.5)',\
+	org.osgi.util.function;version='[1.1.0,1.1.1)',\
+	org.osgi.util.promise;version='[1.1.1,1.1.2)',\
+	slf4j.api;version='[1.7.30,1.7.31)',\
+	org.apache.commons.codec;version='[1.9.0,1.9.1)',\
+	org.apache.commons.logging;version='[1.1.1,1.1.2)',\
+	org.apache.httpcomponents.httpclient;version='[4.5.2,4.5.3)',\
+	org.apache.httpcomponents.httpcore;version='[4.4.6,4.4.7)',\
+	org.keycloak.keycloak-adapter-core;version='[12.0.4,12.0.5)',\
+	org.keycloak.keycloak-adapter-spi;version='[12.0.4,12.0.5)',\
+	org.keycloak.keycloak-authz-client;version='[12.0.4,12.0.5)',\
+	org.keycloak.keycloak-common;version='[12.0.4,12.0.5)',\
+	org.keycloak.keycloak-core;version='[12.0.4,12.0.5)',\
+	org.keycloak.keycloak-servlet-filter-adapter;version='[12.0.4,12.0.5)',\
+	com.cosighter.config;version=snapshot,\
+	org.apache.felix.configurator;version='[1.0.10,1.0.11)',\
+	org.keycloak.keycloak-servlet-adapter-spi;version='[12.0.4,12.0.5)',\
+	bcprov;version='[1.68.0,1.68.1)',\
+	com.fasterxml.jackson.core.jackson-annotations;version='[2.12.2,2.12.3)',\
+	com.fasterxml.jackson.core.jackson-core;version='[2.12.2,2.12.3)',\
+	com.fasterxml.jackson.core.jackson-databind;version='[2.12.2,2.12.3)',\
+	org.jboss.logging.jboss-logging;version='[3.4.1,3.4.2)',\
+	bcpkix;version='[1.68.0,1.68.1)'
