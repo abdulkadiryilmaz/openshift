@@ -28,12 +28,28 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
+<pluginRepositories>
+    <pluginRepository>
+      <id>redhat-ga</id>
+      <name>Red Hat GA Repository</name>
+      <url>https://maven.repository.redhat.com/ga/</url>
+    </pluginRepository>
+  </pluginRepositories>
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+                <execution>
+                    <goals>
+                        <goal>repackage</goal>
+                    </goals>
+                </execution>
+              </executions>
+            <configuration>
+                <redeploy>true</redeploy>
+            </configuration>
 			</plugin>
 		</plugins>
 	</build>
