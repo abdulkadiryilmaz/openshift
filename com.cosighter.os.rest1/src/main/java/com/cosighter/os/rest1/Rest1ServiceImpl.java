@@ -24,7 +24,7 @@ public class Rest1ServiceImpl {
 	@GET
 	@Path("resource1")
 	public String getResource1() {
-		logger.info("resource1 called!");
+		logger.info("resource1 called!!!");
 		return "Resource1";
 	}
 	
